@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="0xSniper.xyz, The best discord sniper.">
+    <title>0xSniper.xyz</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/loader.css">
+    <link rel="stylesheet" href="/assets/css/animation.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+
+    <!-- Fonts -->
+    <link href='/assets/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <section class="section_loader">
+        <div class="center">
+            <div class="loader">
+                <div class="inner one"></div>
+                <div class="inner two"></div>
+                <div class="inner three"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="top" class="content">
+
+        <!-- Nav Bar -->
+        <header class="sticky">
+            <ul id="link_list">
+                <li class="nav_link notactive"><a href="/">Home</a></li>
+                <li class="nav_link notactive"><a href="/">About</a></li>
+                <li class="nav_link notactive"><a href="/">Services</a></li>
+                <li class="nav_link active"><a href="./dashboard">Dashboard</a></li>
+            </ul>
+            <nav>
+                <li class="hide hamburger_i" id="hamburger">
+                    <button id="hamburger_btn"><i class='bx bx-menu'></i></button>
+                </li>
+            </nav>
+        </header>
+
+        <!-- Main Page/Profile -->
+        <div class="profile">
+            <div class="left">
+                <span>Welcome <%= name %>.</span>
+                <p>The fasted discord sniper.</p>
+                <ul>
+                    <li><a href="https://vu.fr/rca-discord"><i class='bx bxl-discord-alt'></i></a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <!-- Login form -->
+
+                <div class="area">
+                    <div class="stats">
+                        <p>Webhook: <%= webhook %>
+                        </p>
+                        <p>Token: <%= token %>
+                        </p>
+                        <p>Sniped: <%= sniped %>
+                        </p>
+                        <p>Slot: <%= slot %>
+                        </p>
+                    </div>
+
+                    <input onclick="change_hook()" value="Change webhook" class='button-uwu'>
+                    <input onclick="change_token()" value="Change Token" class='button-uwu'>
+                    <input onclick="claim_key()" value="Redeem key" class='button-uwu'>
+                </div>
+            </div>
+
+
+            <a href="#top" class="gototop"><i class='bx bx-chevrons-up'></i></a>
+        </div>
+
+        <!-- Javascript -->
+        <script src="/assets/js/loader.js"></script>
+        <script src="/assets/js/nav.js"></script>
+        <script src="/assets/js/observer.js"></script>
+
+        <script>
+            function change_hook() {
+                var hook = window.prompt("Wehbook url:", "None");
+
+                if (!hook.startsWith('https://discord.com/api/webhooks/') && !hook.startsWith('https://canary.discord.com/api/webhooks/') && hook != 'None') {
+                    window.alert('Invalid url.');
+                    return;
+                }
+
+                fetch(`/update_hook/?hook=${hook}`, {
+                    method: 'post'
+                });
+                
+                location.reload();
+            }
+
+            function change_token() {
+                var hook = window.prompt("Token:", "None");
+
+                fetch(`/update_token/?token=${hook}`, {
+                    method: 'post'
+                });
+                
+                location.reload()
+            }
+
+            function claim_key() {
+                var key = window.prompt("Licence key:", "None");
+
+                fetch(`/claim_key/?key=${key}`, {
+                    method: 'post'
+                });
+                
+                location.reload()
+            }
+        </script>
+
+</body>
+
+</html>

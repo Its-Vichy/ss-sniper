@@ -1,0 +1,107 @@
+/* Animations */
+
+@keyframes spooky {
+    from {
+        transform: translatey(.55em);
+    }
+    to {
+        transform: translatey(-.05em);
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20.5em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 150px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -150px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translate3d(-150px, 0px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translate3d(150px, 0px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes ZoomEffect {
+    from {
+        transform: scale(.5);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+/* Load animation */
+
+.reveal, .reveal_zoom {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+.fondu-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    display: none;
+}
+
+.visible {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,51 @@
+.accordion {
+    /*background-color: rgb(225, 225, 225);
+    color: rgb(60, 59, 59);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;*/
+    width: 100%;
+    padding: 12px 18px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-width: 1px;
+
+    box-shadow: 3px 3px 2px 1px rgb(56, 56, 56);
+
+    transition-duration: 0.1s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion .active, .accordion:hover {
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-width: 1px;
+    box-shadow: 1px 1px 1px 1px rgb(56, 56, 56);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel-faq {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+    border-radius: 2px;
+    background-color: rgb(189, 187, 187);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-width: 1px;
+
+    box-shadow: 3px 3px 2px 1px rgb(56, 56, 56);
+
+    transition-duration: 0.1s;
+}

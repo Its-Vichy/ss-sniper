@@ -1,0 +1,85 @@
+.area {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.button-uwu {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-width: 1px;
+
+    box-shadow: 3px 3px 2px 1px rgb(56, 56, 56);
+
+    transition-duration: 0.1s;
+}
+
+.button-uwu:hover {
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-width: 1px;
+    box-shadow: 1px 1px 1px 1px rgb(56, 56, 56);
+}
+
+input[type=text]:hover {
+    transition-duration: 0.1s;
+
+    border-radius: 5px;
+    border-color: rgb(34, 34, 34);
+    box-shadow: 3px 3px 2px 1px rgb(56, 56, 56);
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+input[type=text]:hover {
+    transition-duration: 0.1s;
+
+    border-radius: 5px;
+    border-color: rgb(34, 34, 34);
+    box-shadow: 3px 3px 2px 1px rgb(56, 56, 56);
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+input[type=password]:hover {
+    transition-duration: 0.1s;
+
+    border-radius: 5px;
+    border-color: rgb(34, 34, 34);
+    box-shadow: 3px 3px 2px 1px rgb(56, 56, 56);
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

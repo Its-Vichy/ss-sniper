@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="0xSniper.xyz, The best discord sniper.">
+    <title>0xSniper.xyz</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/loader.css">
+    <link rel="stylesheet" href="/assets/css/animation.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+
+    <!-- Fonts -->
+    <link href='/assets/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <section class="section_loader">
+        <div class="center">
+            <div class="loader">
+                <div class="inner one"></div>
+                <div class="inner two"></div>
+                <div class="inner three"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="top" class="content">
+
+        <!-- Nav Bar -->
+        <header class="sticky">
+            <ul id="link_list">
+                <li class="nav_link notactive"><a href="/">Home</a></li>
+                <li class="nav_link notactive"><a href="/">About</a></li>
+                <li class="nav_link notactive"><a href="/">Services</a></li>
+                <li class="nav_link active"><a href="./login">Login</a></li>
+                <li class="nav_link notactive"><a href="./register">Register</a></li>
+            </ul>
+            <nav>
+                <li class="hide hamburger_i" id="hamburger">
+                    <button id="hamburger_btn"><i class='bx bx-menu'></i></button>
+                </li>
+            </nav>
+        </header>
+
+        <!-- Main Page/Profile -->
+        <div class="profile">
+            <div class="left">
+                <span>0xSniper</span>
+                <p>The fasted discord sniper.</p>
+                <ul>
+                    <li><a href="https://vu.fr/rca-discord"><i class='bx bxl-discord-alt'></i></a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <!-- Login form -->
+
+                <div class="area">
+                    <form action="/login" method="POST">
+                        <input type="text" name="username" placeholder="Username" class="form-control">
+                        <input type="password" name="password" placeholder="Password" class="form-control">
+                        <input type="submit" value="Login" class='button-uwu'>
+                    </form>
+                    <% if(err) { %>
+                        <p style="color: red;">
+                            <%= err %>
+                        </p>
+                    <% } %>
+                    <p class="gray padding">Not registered? <a href="/register">get an account</a>.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <a href="#top" class="gototop"><i class='bx bx-chevrons-up'></i></a>
+    </div>
+
+    <!-- Javascript -->
+    <script src="/assets/js/loader.js"></script>
+    <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/observer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+- Attendre 10min pour bypass screen
